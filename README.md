@@ -59,10 +59,30 @@ The weighted word embedding model execution findings were not in line with the r
 Setup Setps: <br>
 - save Fast Text model bbcFT_dvs as descFT.model.wv.vectors_ngrams.npy and place the file inside the '\web_app\code' folder 
 - place all files inside the folder '\web_app\code' to your python vitural directory
-- Open cmd, activate python, and cd to your python vitural directory
+- open cmd, activate python, and cd to your python vitural directory
 - run the follow steps in cmd, to activate the app.py program
   - set FLASK_APP=app
   - flask run
 - the web page should available at the follow link: http://127.0.0.1:5000/
 - if file size of 'descFT.model.wv.vectors_ngrams.npy' is too large to save.  The vector size of FastText model has changed form 300 to 30.
+
+The application contains 3 pages, the home page, the job seekers page, and the employers page.  On the top of the application, there is a menu bar that allows users to easily access these 3 pages.   The home page is the landing page that users will see when the application is first loaded.  The main purpose of the home page is to let users have quick access to both the job seeker page and the employer's page.  The Home page also listed out the job seeker category, so that job seekers can quickly access the job adv page for a specific category.
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/e4fdbfa0-de3e-4b91-8fdb-8e19438ecf80)
+
+In the Job Seekers page. there is a sub-menu bar available on the top of the page for users to view the job adv by category. The page listed all the related job adv with Titles and a brief description. If users click on the title, it will bring them to another page to show them the full details of the job advertisements.
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/1c4f4be9-e61a-4128-b0a2-601a32f77513)
+
+In the employer page, it allows employer users to input a new job advisement.   For the job category field, users can either select an existing category from the drop-down box or they can key in a new category in the same input box.  All input fields are set to be mandatory because they are all required fields.
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/fce2bd56-b60a-427c-86db-19089aa95837)
+
+Once users fill out the form and press the save button. The application will then use the job description field to perform the prediction of the advertisement category.  FastText learning word embedding model and logistic regression model were used for the prediction.  The prediction result will be shown at the bottom of the page.  
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/7603057b-b0f0-40f6-a9d1-644ecda80fa2)
+
+If users feel like the prediction category, they can make changes to the category field.  Then press the save button again to record the change.  The updated job information can now be searched on the home page or on the Job seekers page.
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/9eef22bb-0a29-4f9d-989f-d4770184d9c8)
+
+
+
+
+
 
