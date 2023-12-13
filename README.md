@@ -1,7 +1,7 @@
 # Natural Language Processing for Job Advertisement Classification
 
 # 1) Basic Text Pre-processing
-input data: files in input_data folder \n
+input data: files in input_data folder <br>
 file: basic_text_preprocessing.ipynb
 
 - Tokenizing the job advertisement list
@@ -21,5 +21,5 @@ file: basic_text_preprocessing.ipynb
   - after most commonn 50 words removal: 0.065
  
 # 2) Generating Feature Representations for Job Advertisement Descriptions
-input data: files generated from step 1 (job_adv.txt, job_adv_json.txt, job_adv_string.txt, vocab.txt) \n
+input data: files generated from step 1 (job_adv.txt, job_adv_json.txt, job_adv_string.txt, vocab.txt) <br>
 file: generating_feature_representations_for_job_adv_desc.ipynb
