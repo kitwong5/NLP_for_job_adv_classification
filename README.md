@@ -70,15 +70,23 @@ The application contains 3 pages, the home page, the job seekers page, and the e
 ![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/e4fdbfa0-de3e-4b91-8fdb-8e19438ecf80)
 
 In the Job Seekers page. there is a sub-menu bar available on the top of the page for users to view the job adv by category. The page listed all the related job adv with Titles and a brief description. If users click on the title, it will bring them to another page to show them the full details of the job advertisements.
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/cacde0ac-32b7-4afa-94bd-79b79132bdfb)
+
 ![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/1c4f4be9-e61a-4128-b0a2-601a32f77513)
 
 In the employer page, it allows employer users to input a new job advisement.   For the job category field, users can either select an existing category from the drop-down box or they can key in a new category in the same input box.  All input fields are set to be mandatory because they are all required fields.
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/bd5274d4-8453-457e-bebe-f65be7125897)
+
 ![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/fce2bd56-b60a-427c-86db-19089aa95837)
 
 Once users fill out the form and press the save button. The application will then use the job description field to perform the prediction of the advertisement category.  FastText learning word embedding model and logistic regression model were used for the prediction.  The prediction result will be shown at the bottom of the page.  
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/15fbc359-e5b2-4f86-97a9-f9de215493db)
+
 ![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/7603057b-b0f0-40f6-a9d1-644ecda80fa2)
 
 If users feel like the prediction category, they can make changes to the category field.  Then press the save button again to record the change.  The updated job information can now be searched on the home page or on the Job seekers page.
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/3fcc584a-53d6-425e-9d34-f19be1cfbb92)
+
 ![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/9eef22bb-0a29-4f9d-989f-d4770184d9c8)
 
 
