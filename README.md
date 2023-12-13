@@ -24,7 +24,7 @@ File: basic_text_preprocessing.ipynb
 Input Data: files generated from step 1 (job_adv.txt, job_adv_json.txt, job_adv_string.txt, vocab.txt) <br>
 File: generating_feature_representations_for_job_adv_desc.ipynb
 
-1. Language model comparisons
+1)Language model comparisons
 
 To find out which language model performs the best on the job advertisement descriptions. Modeling with in-house trained and pre-trained language models has been executed with weighted and un-weighted word vectors. Below are the models used in this language model comparison activity.
 
@@ -41,7 +41,7 @@ Pre-trained Word2Vec has the best performance (highest Accuracy, lowest MAE, RMS
 Overall, the in-house trained models do not performance as well as the pre-trained models.
 For the weighted vs. unweighted version of model, mixed results were obtained. For example, FastText in-house trained model got better MAE, RMSE in the weighted version, however pre-trained GloVe and Word2Vec got better MAE, RMSE in the unweighted version instead.
 
-2. Does more information provide higher accuracy?
+2)Does more information provide higher accuracy?
 
 Un-weighted word embeddings:
 Doc2Vec and Word2Vec language models were used to evaluate if more information provided can enhance the model performance. Execution of the logistic regression model was performed for the Title of the job advertisement, description of the job advertisement, and concatenation of the title and description of the job advertisement. Below is the evaluation result.
