@@ -66,8 +66,9 @@ Setup Setps: <br>
 - the web page should available at the follow link: http://127.0.0.1:5000/
 - if file size of 'descFT.model.wv.vectors_ngrams.npy' is too large to save.  The vector size of FastText model has changed form 300 to 30.
 
-![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/e4fdbfa0-de3e-4b91-8fdb-8e19438ecf80)
+![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/dc1ff51e-f3a9-4bf9-ba97-0552dd52122a)
 The application contains 3 pages, the home page, the job seekers page, and the employers page.  On the top of the application, there is a menu bar that allows users to easily access these 3 pages.   The home page is the landing page that users will see when the application is first loaded.  The main purpose of the home page is to let users have quick access to both the job seeker page and the employer's page.  The Home page also listed out the job seeker category, so that job seekers can quickly access the job adv page for a specific category.
+
 
 ![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/cacde0ac-32b7-4afa-94bd-79b79132bdfb)
 In the Job Seekers page. there is a sub-menu bar available on the top of the page for users to view the job adv by category. The page listed all the related job adv with Titles and a brief description. If users click on the title, it will bring them to another page to show them the full details of the job advertisements.
