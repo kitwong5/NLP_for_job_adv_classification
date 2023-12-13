@@ -20,11 +20,11 @@ File: basic_text_preprocessing.ipynb
   - after words that only appear once removal: 0.051
   - after most commonn 50 words removal: 0.065
  
-# 2) Generating Feature Representations for Job Advertisement Descriptions
+# 2) Generating Feature Representations and perform Classification for Job Advertisement Descriptions
 Input Data: files generated from step 1 (job_adv.txt, job_adv_json.txt, job_adv_string.txt, vocab.txt) <br>
 File: generating_feature_representations_for_job_adv_desc.ipynb
 
-1)Language model comparisons
+1) Language model comparisons
 
 To find out which language model performs the best on the job advertisement descriptions. Modeling with in-house trained and pre-trained language models has been executed with weighted and un-weighted word vectors. Below are the models used in this language model comparison activity.
 
@@ -41,7 +41,7 @@ Pre-trained Word2Vec has the best performance (highest Accuracy, lowest MAE, RMS
 Overall, the in-house trained models do not performance as well as the pre-trained models.
 For the weighted vs. unweighted version of model, mixed results were obtained. For example, FastText in-house trained model got better MAE, RMSE in the weighted version, however pre-trained GloVe and Word2Vec got better MAE, RMSE in the unweighted version instead.
 
-2)Does more information provide higher accuracy?
+2) Does more information provide higher accuracy?
 
 Un-weighted word embeddings:
 Doc2Vec and Word2Vec language models were used to evaluate if more information provided can enhance the model performance. Execution of the logistic regression model was performed for the Title of the job advertisement, description of the job advertisement, and concatenation of the title and description of the job advertisement. Below is the evaluation result.
@@ -55,6 +55,14 @@ Word2Vec language model was used to evaluate if more information provided can en
 
 The weighted word embedding model execution findings were not in line with the results from the un-weighted one. In the weighted word embeddings, concatenation of the title and description resulted in lowering the model performance. The findings showed that adding more information did not able to achieve higher accuracy for modeling with weighted word embeddings.
 
-
-
+# 3)  Web App for Job Advertisement Classification
+Setup Setps: <br>
+- save Fast Text model bbcFT_dvs as descFT.model.wv.vectors_ngrams.npy and place the file inside the '\web_app\code' folder 
+- place all files inside the folder '\web_app\code' to your python vitural directory
+- Open cmd, activate python, and cd to your python vitural directory
+- run the follow steps in cmd, to activate the app.py program
+  - set FLASK_APP=app
+  - flask run
+- the web page should available at the follow link: http://127.0.0.1:5000/
+- if file size of 'descFT.model.wv.vectors_ngrams.npy' is too large to save.  The vector size of FastText model has changed form 300 to 30.
 
