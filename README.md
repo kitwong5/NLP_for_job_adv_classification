@@ -43,7 +43,7 @@ For the weighted vs. unweighted version of model, mixed results were obtained. F
 
 2) Does more information provide higher accuracy?
 
-Un-weighted word embeddings:
+Un-weighted word embeddings: <br>
 Doc2Vec and Word2Vec language models were used to evaluate if more information provided can enhance the model performance. Execution of the logistic regression model was performed for the Title of the job advertisement, description of the job advertisement, and concatenation of the title and description of the job advertisement. Below is the evaluation result.
 ![image](https://github.com/kitwong5/NLP_for_job_adv_classification/assets/142315009/37bc6036-bf3e-49c5-925f-baa5f702a418)
 
