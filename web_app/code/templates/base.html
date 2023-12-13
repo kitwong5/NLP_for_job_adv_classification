@@ -1,0 +1,21 @@
+<!DOCTYPE html">
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
+</head>
+
+<body>
+  <ul>
+    <li> <a href="/"> Home </a> </li>
+    <li> <a href="{{ url_for('job_seekers', cat_index = 9) }}"> Job Seekers </a> </li>
+    <li> <a href="/employers">  Employers </a> </li>
+  </ul>
+
+{% block body %}
+{% endblock %}
+
+<script src="{{ url_for('static', filename='jquery-3.6.0.js') }}"></script>
+{% block script %}
+{% endblock %}
+</body>
+</html>

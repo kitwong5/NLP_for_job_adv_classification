@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<table>
+  <tr>
+    <th class="text_left">
+      <div id="main" >
+         <div id="content">
+           <div id="category">
+                <h2><span>Job seekers</span></h2>
+                <div>
+                    <p><a href="{{ url_for('job_seekers', cat_index = 9) }}">All Jobs</a></p>
+                </div>
+            {% for key, value in df_catid.iterrows() %}
+              <div>
+                <p><a href="{{ url_for('job_seekers', cat_index = value['categoryidx']) }}">{{value['category']}}</a></p>
+              </div>
+            {%endfor%}
+        </div>
+        <div id="category">
+            <h2><span>Employers</span></h2>
+            <div>
+              <p><a href="/employers">Add Jobs</a></p>
+            </div>
+          </div>
+       </div>
+     </div>
+    </th>
+    <th>
+     <div id="main" >
+        <div id="content" > 
+        </div>
+      </div>
+    </th>
+  </tr>
+</table>
+{% endblock %}
+
+
+

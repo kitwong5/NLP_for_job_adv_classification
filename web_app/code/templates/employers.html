@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+ <form action="/employers"  method="POST">
+    {%if webindex%}
+        <p>Webindex: {{ webindex }}</p> 
+    {% endif %}
+    <input type="text" name="webid" value="{{ webindex }}" hidden>
+    <input type="text" name="df_index" value="{{ df_index }}" hidden>
+    <p>Category:</p>
+    <input type="text" name="category" list="categoryList" value="{{ category }}" required>
+    <datalist id="categoryList">
+    {%for ci in range(0, category_ls_len)%}     
+        <option value="{{ category_ls[ci] }}">
+    {%endfor%}      
+    </datalist>
+    <p>Title:</p>
+    <p><input type = "text" name = "title" style="width: 100%;" value="{{ title }}" required/></p>
+    <p>Company:</p>
+    <p><input type = "text" name = "company" style="width: 100%;" value="{{ company }}" required/></p>
+    <p>Description:</p>
+    <textarea type="text" name="description" style="height:200px;width: 100%;" required>{{ description }}</textarea>
+    <p><input type = "submit" value = "Save" /></p>
+    <p> {{ predicted_message }} </p>
+ </form> 
+
+{% endblock %}
+
+

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<table style="width:100%">
+  <tr>
+    <th>Category:</th>
+    <th><a href="{{ url_for('job_seekers', cat_index = 9) }}">All</a></th>
+    {% for key, value in df_catid.iterrows() %}
+      <th><a href="{{ url_for('job_seekers', cat_index = value['categoryidx']) }}">{{value['category']}}</a></th>
+    {%endfor%}
+  </tr>
+</table>
+<div> 
+
+  {%for i in range(0, len)%} 
+    {% if cat_index == 9 %}
+      <div id="title"><h3><a href="{{ url_for('job_seekers_index', job_index = i) }}">{{df_title[i]}}</a></h3></div> 
+      <div id="desc">{{df_desc[i][0:200]}}...</div> 
+      <br>
+    {% else %}
+      {% if cat_index == df_cat[i] %}
+      <div id="title"><h3><a href="{{ url_for('job_seekers_index', job_index = i) }}">{{df_title[i]}}</a></h3></div> 
+      <div id="desc">{{df_desc[i][0:200]}}...</div> 
+      <br>
+      {% endif %}  
+    {% endif %}  
+  {%endfor%} 
+    
+</div> 
+
+{% endblock %}
+
